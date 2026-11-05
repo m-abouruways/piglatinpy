@@ -40,5 +40,9 @@ class PigLatinTranslator:
 
             return self.phrase + "ay"
 
-        return self.phrase[1:] + self.phrase[0] + "ay"
-    
+        index = 0
+
+        while index < len(self.phrase) and self.phrase[index] not in vowels:
+            index += 1
+
+        return self.phrase[index:] + self.phrase[:index] + "ay"
