@@ -39,3 +39,6 @@ class PigLatinTranslator:
                 return self.phrase + "yay"
 
             return self.phrase + "ay"
+
+        return self.phrase[1:] + self.phrase[0] + "ay"
+    
